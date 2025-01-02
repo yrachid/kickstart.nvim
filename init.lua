@@ -87,6 +87,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -97,6 +98,13 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+
+vim.o.termguicolors = true
 
 -- Make line numbers default
 vim.opt.number = true
