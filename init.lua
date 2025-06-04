@@ -797,9 +797,22 @@ require('lazy').setup({
     config = function()
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
+      -- vim.g.gruvbox_material_enable_italic = true
+      -- vim.g.gruvbox_material_background = 'medium'
+      -- vim.cmd.colorscheme 'gruvbox-material'
+    end,
+  },
+  {
+    'thallada/farout.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
       vim.g.gruvbox_material_enable_italic = true
       vim.g.gruvbox_material_background = 'medium'
-      vim.cmd.colorscheme 'gruvbox-material'
+      vim.cmd.colorscheme 'farout'
     end,
   },
   -- Highlight todo, notes, etc in comments
