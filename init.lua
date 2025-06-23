@@ -805,14 +805,14 @@ require('lazy').setup({
   {
     'thallada/farout.nvim',
     lazy = false,
-    priority = 1000,
     opts = {},
+  },
+  {
+    'shmerl/neogotham',
+    lazy = false,
     config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.gruvbox_material_enable_italic = true
-      vim.g.gruvbox_material_background = 'medium'
-      vim.cmd.colorscheme 'farout'
+      require('neogotham'):setup { oldgotham = true }
+      vim.cmd.colorscheme 'neogotham'
     end,
   },
   -- Highlight todo, notes, etc in comments
