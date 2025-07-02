@@ -345,6 +345,17 @@ require('lazy').setup({
             require('telescope.themes').get_dropdown(),
           },
         },
+        pickers = {
+          live_grep = {
+            additional_args = { '--hidden' },
+          },
+          grep_string = {
+            additional_args = { '--hidden' },
+          },
+          find_files = {
+            hidden = true,
+          },
+        },
       }
 
       -- Enable Telescope extensions if they are installed
