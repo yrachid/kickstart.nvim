@@ -878,11 +878,13 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.lint',
+
   'tomasiser/vim-code-dark',
   require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns',
   require 'custom.plugins.github-copilot',
   require 'custom.plugins.nvim-ufo',
-  require 'kickstart.plugins.gitsigns',
+  require 'custom.plugins.neotest',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
