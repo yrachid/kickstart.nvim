@@ -1,4 +1,4 @@
-local handler = function(virtText, lnum, endLnum, width, truncate)
+local virtual_text_handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
   local suffix = (' 󰁂 %d '):format(endLnum - lnum)
   local sufWidth = vim.fn.strdisplaywidth(suffix)
@@ -28,7 +28,7 @@ end
 
 return {
   'kevinhwang91/nvim-ufo',
-  version = '*',
+  version = '1.4.0',
   dependencies = {
     'kevinhwang91/promise-async',
   },
@@ -36,11 +36,7 @@ return {
   cmd = {},
   config = function(_, _)
     require('ufo').setup {
-      provider_selector = function(_, _, _)
-        return { 'treesitter', 'indent' }
-      end,
-
-      fold_virt_text_handler = handler,
+      fold_virt_text_handler = virtual_text_handler,
     }
   end,
   keys = function(_, keys)
